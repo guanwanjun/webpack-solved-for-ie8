@@ -25,7 +25,8 @@ http://127.0.0.1:8282
 
 2. 给插件配置要支持ie8的选项
 
-    `new webpack.optimize.UglifyJsPlugin({
+    ```javascript
+    new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false,//if you want to see uglifyjs warnings, you need to set compress.warnings to true
             screw_ie8 : false
@@ -34,7 +35,8 @@ http://127.0.0.1:8282
             screw_ie8: false
         },
         output: { screw_ie8: false }
-    })`
+    })
+    ````
 
 关于1，Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。如果想要这些方法运行，就得使用babel-polyfill
 
