@@ -1,0 +1,1 @@
+webpackJsonp([0],{327:function(o,n){o.exports=function(){console.log("test2.js")}}});
